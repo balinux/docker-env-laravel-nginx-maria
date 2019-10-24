@@ -44,7 +44,7 @@ services:
     ports:
       - "3309:3306"
     environment:
-      MYSQL_DATABASE: oauth2server
+      MYSQL_DATABASE: laravel_for_god_sake
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - dbdata:/var/lib/mysql
