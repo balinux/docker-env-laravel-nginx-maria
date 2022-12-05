@@ -16,5 +16,19 @@ buat key dengna menggunakan perintah ```php artisan key:generate```
 ## database
 untuk menguji apakah database sudah berjalan dengan baik yaitu dengan menggunakan perintah : ```mysql -u root -p -P 3309 -h 127.0.0.1``` 
 
+## tanpa sync data
+beri comment pada bagian ini
+```   
+ volumes:
+      # - ./:/var/www
+```
+
+selanjutnya 
+- remote container app
+- buat folder vendor
+- jalankan composer update
+- php artisan key:generate
+- done
+
 ## referensi 
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose
