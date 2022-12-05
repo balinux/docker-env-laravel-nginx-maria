@@ -46,6 +46,12 @@ COPY --chown=www:www . /var/www
 # Change current user to www
 USER www
 
+# run composer.json
+RUN composer update
+
+# run php generate
+RUN php artisan key:generate
+
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
